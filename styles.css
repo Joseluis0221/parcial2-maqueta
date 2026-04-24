@@ -1,1 +1,511 @@
-﻿
+﻿:root {
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #cc3333; /* Red button */
+  --color-purple: #5c4e9a; /* Purple section */
+  --color-card: #e5c365; /* Yellow cards */
+  --color-plus: #034b5b; /* Disney+ teal */
+  --color-gray-bg: #f4f4f4; /* Sections like Parks & Coming soon */
+  --color-cyan: #e3f5f6; /* Visa section */
+  --color-footer-text: #666666;
+  --font-family: Avenir, "Segoe UI", Arial, sans-serif;
+  --container-max: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-gray-bg);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Base Structure */
+header, main, footer, .hero {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  background: var(--color-surface);
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2.5rem;
+}
+
+.logo {
+  height: 38px; /* Fixed height to prevent cutting off */
+  width: auto;
+}
+
+.nav-links {
+  display: none;
+  list-style: none;
+  gap: 1.8rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.nav-links a:hover,
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.search-wrap {
+  position: relative;
+}
+
+.search-wrap input {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.75rem;
+  width: 180px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 50vw;
+  max-height: 500px;
+  min-height: 300px;
+  background: url("images/banner-background.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.overlay {
+  padding-left: 10%;
+  max-width: 600px;
+  color: #fff;
+}
+
+.title {
+  width: 320px;
+  margin-bottom: 0.8rem;
+}
+
+.overlay p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.4rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+}
+
+.btn-secondary {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.7);
+}
+
+/* SECTIONS COMMON */
+.purple, .plus, .coming, .parks, .visa {
+  padding: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* PURPLE */
+.purple {
+  background: var(--color-purple);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--color-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem 0.8rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.card-copy {
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.card-cta {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  cursor: pointer;
+}
+
+/* PLUS */
+.plus {
+  background: var(--color-plus);
+  color: #fff;
+}
+
+.plus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.plus-item {
+  text-align: center;
+}
+
+.plus-item img {
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.plus-item p {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.plus-link {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: underline;
+  color: #aedbf0;
+}
+
+/* COMING */
+.coming {
+  background: var(--color-gray-bg);
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 0.8rem;
+}
+
+.movie-card h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  line-height: 1.2;
+}
+
+.movie-card p {
+  font-size: 0.7rem;
+  color: #555;
+}
+
+/* PARKS */
+.parks {
+  background: var(--color-gray-bg);
+  padding-top: 1rem;
+}
+
+.parks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.park {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.park img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.park-copy {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.park-copy h3 {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.park-copy p {
+  font-size: 0.85rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.park-copy a {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-decoration: underline;
+  color: #000;
+}
+
+/* VISA */
+.visa {
+  background: var(--color-cyan);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.visa-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  transform: scale(1.05); /* Exact crop match */
+  transform-origin: left center;
+}
+
+.visa-text {
+  padding: 2rem 4rem;
+  text-align: center;
+}
+
+.visa-text h2 {
+  color: #0b498f;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.visa-text h3 {
+  color: #174288;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.visa-text p {
+  color: #1d4677;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.old-price {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.btn-accent {
+  background: #a265b3;
+  color: #fff;
+  border: none;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+  display: inline-flex;
+}
+
+.visa-legal {
+  display: block;
+  margin-top: 3rem;
+  font-size: 0.6rem;
+  color: #436a87;
+}
+
+/* FOOTER */
+footer {
+  background: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+footer img {
+  height: 34px; /* Fixed height! Prevent cut logo */
+  width: auto;
+  margin: 0 auto 1rem;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-nav auto {
+  font-size: 0.75rem;
+}
+.footer-nav a {
+  color: var(--color-footer-text);
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.footer-nav-secondary a {
+  font-size: 0.65rem;
+}
+
+.copyright {
+  font-size: 0.65rem;
+  color: var(--color-footer-text);
+  margin-top: 1rem;
+}
+
+@media (min-width: 900px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+@media (max-width: 899px) {
+  .cards-grid, .plus-grid, .movies-grid, .parks-grid, .visa {
+    grid-template-columns: 1fr;
+  }
+  .visa-image {
+    transform: none;
+    height: 300px;
+  }
+}
+.card {
+  background: var(--color-card);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Important for clean edges */
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1/1; /* Square images as in mockup */
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  padding: 1.5rem 1rem 0;
+}
+
+.card-copy {
+  font-size: 0.70rem;
+  margin-bottom: 1rem;
+  color: #222;
+  padding: 0 1rem;
+  flex-grow: 1; /* Push text to align layout */
+}
+
+.card-cta {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0 1rem 1.5rem;
+}
+.visa-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  transform: scale(1.05);
+  transform-origin: left center;
+  mix-blend-mode: darken; /* Retain image blend to hide white background */
+}
