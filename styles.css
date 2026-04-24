@@ -1,12 +1,12 @@
 ﻿:root {
   --color-surface: #ffffff;
   --color-text: #1a1a1a;
-  --color-primary: #cc3333; /* Red button */
-  --color-purple: #5c4e9a; /* Purple section */
-  --color-card: #e5c365; /* Yellow cards */
-  --color-plus: #034b5b; /* Disney+ teal */
-  --color-gray-bg: #f4f4f4; /* Sections like Parks & Coming soon */
-  --color-cyan: #e3f5f6; /* Visa section */
+  --color-primary: #cc3333; 
+  --color-purple: #5c4e9a; 
+  --color-card: #e5c365; 
+  --color-plus: #034b5b; 
+  --color-gray-bg: #f4f4f4; 
+  --color-cyan: #e3f5f6; 
   --color-footer-text: #666666;
   --font-family: Avenir, "Segoe UI", Arial, sans-serif;
   --container-max: 1200px;
@@ -47,7 +47,7 @@ a {
   border: 0;
 }
 
-/* Base Structure */
+
 header, main, footer, .hero {
   width: 100%;
   max-width: var(--container-max);
@@ -55,7 +55,7 @@ header, main, footer, .hero {
   background: var(--color-surface);
 }
 
-/* NAV */
+
 .nav {
   display: flex;
   align-items: center;
@@ -64,7 +64,7 @@ header, main, footer, .hero {
 }
 
 .logo {
-  height: 38px; /* Fixed height to prevent cutting off */
+  height: 38px; 
   width: auto;
 }
 
@@ -103,7 +103,7 @@ header, main, footer, .hero {
   width: 180px;
 }
 
-/* HERO */
+
 .hero {
   position: relative;
   height: 50vw;
@@ -166,7 +166,7 @@ header, main, footer, .hero {
   border: 1px solid rgba(255,255,255,0.7);
 }
 
-/* SECTIONS COMMON */
+
 .purple, .plus, .coming, .parks, .visa {
   padding: 2.5rem;
 }
@@ -178,7 +178,7 @@ h2 {
   font-weight: 400;
 }
 
-/* PURPLE */
+
 .purple {
   background: var(--color-purple);
 }
@@ -231,7 +231,7 @@ h2 {
   cursor: pointer;
 }
 
-/* PLUS */
+
 .plus {
   background: var(--color-plus);
   color: #fff;
@@ -266,7 +266,7 @@ h2 {
   color: #aedbf0;
 }
 
-/* COMING */
+
 .coming {
   background: var(--color-gray-bg);
 }
@@ -296,7 +296,7 @@ h2 {
   color: #555;
 }
 
-/* PARKS */
+
 .parks {
   background: var(--color-gray-bg);
   padding-top: 1rem;
@@ -345,7 +345,7 @@ h2 {
   color: #000;
 }
 
-/* VISA */
+
 .visa {
   background: var(--color-cyan);
   display: grid;
@@ -360,7 +360,7 @@ h2 {
   height: 100%;
   object-fit: cover;
   object-position: left center;
-  transform: scale(1.05); /* Exact crop match */
+  transform: scale(1.05); 
   transform-origin: left center;
 }
 
@@ -411,7 +411,7 @@ h2 {
   color: #436a87;
 }
 
-/* FOOTER */
+
 footer {
   background: #fff;
   text-align: center;
@@ -420,7 +420,7 @@ footer {
 }
 
 footer img {
-  height: 34px; /* Fixed height! Prevent cut logo */
+  height: 34px; 
   width: auto;
   margin: 0 auto 1rem;
 }
@@ -471,12 +471,12 @@ footer img {
   background: var(--color-card);
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Important for clean edges */
+  overflow: hidden; 
 }
 
 .card img {
   width: 100%;
-  aspect-ratio: 1/1; /* Square images as in mockup */
+  aspect-ratio: 1/1; 
   object-fit: cover;
 }
 
@@ -492,7 +492,7 @@ footer img {
   margin-bottom: 1rem;
   color: #222;
   padding: 0 1rem;
-  flex-grow: 1; /* Push text to align layout */
+  flex-grow: 1; 
 }
 
 .card-cta {
@@ -507,5 +507,5 @@ footer img {
   object-position: left center;
   transform: scale(1.05);
   transform-origin: left center;
-  mix-blend-mode: darken; /* Retain image blend to hide white background */
+  mix-blend-mode: darken; 
 }
